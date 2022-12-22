@@ -1,0 +1,79 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run
+
+## exception
+
+FileSystemException: FileSystemException: Exists failed, path = 'C:\Users\TSU\Desktop\128\lab3food\assets\C:\Users\TSU\Desktop\128\lab3food' (OS Error: The filename, directory name, or volume label syntax is incorrect.
+, errno = 123)
+
+```
+#0      _Directory.existsSync (dart:io/directory_impl.dart:94:7)
+#1      ForwardingFileSystemEntity.existsSync (package:file/src/forwarding/forwarding_file_system_entity.dart:43:33)
+#2      ErrorHandlingDirectory.existsSync.<anonymous closure> (package:flutter_tools/src/base/error_handling_io.dart:497:22)
+#3      _runSync (package:flutter_tools/src/base/error_handling_io.dart:597:14)
+#4      ErrorHandlingDirectory.existsSync (package:flutter_tools/src/base/error_handling_io.dart:496:12)
+#5      _AssetDirectoryCache.variantsFor (package:flutter_tools/src/asset.dart:1035:43)
+#6      ManifestAssetBundle._parseAssetFromFile (package:flutter_tools/src/asset.dart:866:37)
+#7      ManifestAssetBundle._parseAssets (package:flutter_tools/src/asset.dart:753:9)
+#8      ManifestAssetBundle.build (package:flutter_tools/src/asset.dart:261:54)
+<asynchronous suspension>
+#9      ResidentWebRunner._updateDevFS (package:flutter_tools/src/isolated/resident_web_runner.dart:470:26)
+<asynchronous suspension>
+#10     ResidentWebRunner.run.<anonymous closure> (package:flutter_tools/src/isolated/resident_web_runner.dart:283:41)
+<asynchronous suspension>
+#11     asyncGuard.<anonymous closure> (package:flutter_tools/src/base/async_guard.dart:111:24)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, 3.3.9, on Microsoft Windows [Version 10.0.22621.963], locale en-US)
+    • Flutter version 3.3.9 on channel stable at D:\SDK\flutter
+    • Upstream repository https://github.com/flutter/flutter.git
+    • Framework revision b8f7f1f986 (3 weeks ago), 2022-11-23 06:43:51 +0900
+    • Engine revision 8f2221fbef
+    • Dart version 2.18.5
+    • DevTools version 2.15.0
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 33.0.1)
+    • Android SDK at C:\Users\TSU\AppData\Local\Android\sdk
+    • Platform android-33, build-tools 33.0.1
+    • Java binary at: C:\Program Files\Android\Android Studio\jre\bin\java
+    • Java version OpenJDK Runtime Environment (build 11.0.13+0-b1751.21-8125866)
+    • All Android licenses accepted.
+
+[✓] Chrome - develop for the web
+    • Chrome at C:\Program Files\Google\Chrome\Application\chrome.exe
+
+[✓] Visual Studio - develop for Windows (Visual Studio Community 2022 17.4.2)
+    • Visual Studio at C:\Program Files\Microsoft Visual Studio\2022\Community
+    • Visual Studio Community 2022 version 17.4.33122.133
+    • Windows 10 SDK version 10.0.22000.0
+
+[✓] Android Studio (version 2021.3)
+    • Android Studio at C:\Program Files\Android\Android Studio
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    • Java version OpenJDK Runtime Environment (build 11.0.13+0-b1751.21-8125866)
+
+[✓] VS Code (version 1.74.0)
+    • VS Code at C:\Users\TSU\AppData\Local\Programs\Microsoft VS Code
+    • Flutter extension version 3.54.0
+
+[✓] Connected device (3 available)
+    • Windows (desktop) • windows • windows-x64    • Microsoft Windows [Version 10.0.22621.963]
+    • Chrome (web)      • chrome  • web-javascript • Google Chrome 108.0.5359.98
+    • Edge (web)        • edge    • web-javascript • Microsoft Edge 108.0.1462.46
+
+[✓] HTTP Host Availability
+    • All required HTTP hosts are available
+
+• No issues found!
+```
